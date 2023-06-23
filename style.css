@@ -79,10 +79,11 @@ nav ul li a:hover::after {
 }
 
 .header-text p {
-    margin-left: 250px;
     color: #7851a9;
     font-size: 50px;
     font-weight: bold;
+    text-align: center;
+    margin-right: 510px;
 }
 
 .header-text span {
@@ -93,4 +94,6 @@ nav ul li a:hover::after {
 .header-text h1 {
     margin-top: 20px;
     font-size: 40px;
+    text-align: center;
+    margin-right: 520px;
 }
