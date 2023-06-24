@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <!-------------------------------------Header-------------------->
+
         <div id="header">
             <div class="container">
                 <nav>
@@ -24,10 +26,132 @@
                 <p>I Am Rennie</p>
                 <h1>
                     I am a <span>Software Engineer</span> passionate about
-                    <br />building visionary systems with lasting <br />
-                    impacts.
+                    building visionary systems <br />
+                    with lasting impacts.
                 </h1>
             </div>
         </div>
+
+        <!-------------------------------------about-------------------->
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/about2.png" alt="about" />
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            I am a computer science student at Tufts University.
+                            I enjoy solving problems and building computer
+                            programs that can be re-used for generations. I
+                            embrace failures as an opportunity for growth and
+                            constantly seek improvement. My passion lies in the
+                            fields of artificial intelligence, cyber security
+                            and software Development. Beyond coding, I derive
+                            immense pleasure from road trips, biking, and
+                            exploring new destinations(vacations). Let's
+                            collaborate and shape the future together!
+                        </p>
+                        <div class="tab-titles">
+                            <p
+                                class="tab-links active-link"
+                                onclick="opentab('Education')"
+                            >
+                                Education
+                            </p>
+                            <p
+                                class="tab-links"
+                                onclick="opentab('Experience')"
+                            >
+                                Experience
+                            </p>
+                            <p class="tab-links" onclick="opentab('Skills')">
+                                Skills
+                            </p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Education">
+                            <ul>
+                                <li>
+                                    <span>Tufts University</span><br />
+                                    Bachelors Computer Science <br />
+                                    Entrepreneurship Minor <br />
+                                    2021 - 2025
+                                </li>
+                                <li>
+                                    <span>Alliance High School</span><br />
+                                    High School Diploma <br />
+                                    2016 - 2019
+                                </li>
+                                <li>
+                                    <span>Roseve Educational Center</span><br />
+                                    Primary School Diploma <br />
+                                    2008 - 2015
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li>
+                                    <span>Equity Bank</span><br />
+                                    Intern<br />
+                                    Feb 2020 - APril 2020 (3 mos)
+                                </li>
+                                <li>
+                                    <span>M-TUMA</span><br />
+                                    Intern <br />
+                                    Jan 2020 - Feb 2020 (2 mos)
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Skills">
+                            <ul>
+                                <li>
+                                    <span>Web Development</span><br />
+                                    Skilled in creating visually appealing and
+                                    user-friendly <br />websites using HTML,
+                                    CSS, and JavaScript along popular
+                                    <br />frameworks such as React and Django
+                                    ensuring <br />seamless experiences across
+                                    different devices.
+                                </li>
+                                <li>
+                                    <span>Object Oriented Programming</span
+                                    ><br />
+                                    Experience in applying object-oriented
+                                    design patterns <br />to create modular and
+                                    maintainable software solutions.
+                                </li>
+                                <li>
+                                    <span>Programming Languages</span><br />
+                                    Proficient in multiple programming Languages
+                                    such as <br />
+                                    C++, JS, Python, and C enabling quick
+                                    adaptivity to <br />
+                                    new languages and frameworks to accomodate
+                                    project <br />requirements
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tabLinks = document.getElementsByClassName('tab-links');
+            var tabContents = document.getElementsByClassName('tab-contents');
+
+            function opentab(tabname) {
+                for (tabLink of tabLinks) {
+                    tabLink.classList.remove('active-link');
+                }
+                for (tabContent of tabContents) {
+                    tabContent.classList.remove('active-tab');
+                }
+                event.currentTarget.classList.add('active-link');
+                document.getElementById(tabname).classList.add('active-tab');
+            }
+        </script>
     </body>
 </html>
