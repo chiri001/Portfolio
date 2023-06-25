@@ -19,13 +19,15 @@
             <div class="container top-words">
                 <nav>
                     <img src="images/cover.png" class="logo" alt="logo" />
-                    <ul>
+                    <ul id="sideMenu">
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <i class="fas fa-times" onclick="closeMenu()"></i>
                     </ul>
+                    <i class="fas fa-bars" onclick="openMenu()"></i>
                 </nav>
             </div>
             <div class="header-text">
@@ -35,6 +37,7 @@
                     building visionary systems <br />
                     with lasting impacts.
                 </h1>
+                <!-- <h1 class="small">I am a <span>Software Engineer</span></h1> -->
             </div>
         </div>
 
@@ -197,7 +200,7 @@
         <!------------------------------Contact------------------------------>
 
         <div id="contact">
-            <div class="box">
+            <div class="box contact">
                 <div class="row">
                     <div class="contact-left">
                         <h1 class="sub-title">Contact</h1>
@@ -209,13 +212,23 @@
                             <i class="fas fa-mobile-alt"></i> +1(781)-219-1179
                         </p>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-instagram"></i> </a>
-                            <a href="#"><i class="fab fa-twitter"></i> </a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i> </a>
+                            <a href="https://www.instagram.com/r_enni.e/"
+                                ><i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/RennieChirie"
+                                ><i class="fab fa-twitter"></i>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/rennie-kipchirchir-08aa68184/"
+                                ><i class="fab fa-linkedin-in"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="contact-right">
-                        <form>
+                        <form
+                            name="submit-to-google-sheet"
+                            onsubmit="submitForm(event)"
+                        >
                             <input
                                 type="text"
                                 name="Name"
@@ -236,6 +249,9 @@
                             <button type="submit" class="button-btn2">
                                 Submit
                             </button>
+                            <div id="popup" class="popup">
+                                <p>Message sent successfully!</p>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -258,6 +274,49 @@
                 event.currentTarget.classList.add('active-link');
                 document.getElementById(tabname).classList.add('active-tab');
             }
+        </script>
+
+        <script>
+            var sidemnu = document.getElementById('sideMenu');
+
+            function openMenu() {
+                sidemnu.style.right = '0';
+            }
+            function closeMenu() {
+                sidemnu.style.right = '-200px';
+            }
+        </script>
+
+        <script>
+            function submitForm(event) {
+                showPopup();
+                setTimeout(function () {
+                    closePopup();
+                    resetForm();
+                }, 3000);
+            }
+            function showPopup() {
+                document.getElementById('popup').style.display = 'block';
+            }
+            function closePopup() {
+                document.getElementById('popup').style.display = 'none';
+            }
+            function resetForm() {
+                document.forms['submit-to-google-sheet'].reset();
+            }
+        </script>
+
+        <script>
+            const scriptURL =
+                'https://script.google.com/macros/s/AKfycbweBPTE_NF01D_ckWeBOIjrB8665CE6WV363TUCW_FPOklIfBDSK3wPS2oAAujItLcNJw/exec';
+            const form = document.forms['submit-to-google-sheet'];
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then((response) => console.log('Success!', response))
+                    .catch((error) => console.error('Error!', error.message));
+            });
         </script>
     </body>
 </html>
