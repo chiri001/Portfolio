@@ -5,20 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>My portfolio</title>
         <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha384-XX..."
+            crossorigin="anonymous"
+        />
     </head>
     <body>
         <!-------------------------------------Header-------------------->
 
         <div id="header">
-            <div class="container">
+            <div class="container top-words">
                 <nav>
                     <img src="images/cover.png" class="logo" alt="logo" />
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,7 +41,7 @@
         <!-------------------------------------about-------------------->
 
         <div id="about">
-            <div class="container">
+            <div class="container about">
                 <div class="row">
                     <div class="about-col-1">
                         <img src="images/about2.png" alt="about" />
@@ -137,6 +143,106 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-------------------------Portfolio------------------------->
+
+        <div id="portfolio">
+            <div class="box about">
+                <h1 class="my-project">My Projects</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/ecommerce.png" alt="" />
+                        <div class="layer">
+                            <h3>Ecommerce website</h3>
+                            <p>
+                                The website enables users to buy groceries
+                                online from a small agricultural businesses
+                            </p>
+                            <a href="#"
+                                ><i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/ecommerce.png" alt="" />
+                        <div class="layer">
+                            <h3>Ecommerce website</h3>
+                            <p>
+                                The website enables users to buy groceries
+                                online from a small agricultural businesses
+                            </p>
+                            <a href="#"
+                                ><i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/ecommerce.png" alt="" />
+                        <div class="layer">
+                            <h3>Ecommerce website</h3>
+                            <p>
+                                The website enables users to buy groceries
+                                online from a small agricultural businesses
+                            </p>
+                            <a href="#"
+                                ><i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button"> See More</a>
+            </div>
+        </div>
+        <!------------------------------Contact------------------------------>
+
+        <div id="contact">
+            <div class="box">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact</h1>
+                        <p>
+                            <i class="fas fa-paper-plane"></i>
+                            renniekipchirchir@gmail.com
+                        </p>
+                        <p>
+                            <i class="fas fa-mobile-alt"></i> +1(781)-219-1179
+                        </p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i> </a>
+                            <a href="#"><i class="fab fa-twitter"></i> </a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i> </a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input
+                                type="text"
+                                name="Name"
+                                placeholder="Name"
+                                required
+                            />
+                            <input
+                                type="email"
+                                name="Email"
+                                placeholder="Email"
+                                required
+                            />
+                            <textarea
+                                name="Message"
+                                rows="6"
+                                placeholder="Message"
+                            ></textarea>
+                            <button type="submit" class="button-btn2">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright @RK</p>
         </div>
         <script>
             var tabLinks = document.getElementsByClassName('tab-links');
