@@ -174,6 +174,7 @@ nav ul li a:hover::after {
     list-style: none;
     margin: 10px 0;
     width: 100%;
+    text-align: left;
 }
 
 .tab-contents ul li span {
@@ -405,6 +406,28 @@ form .btn2 {
     font-weight: bold;
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #45a049;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: #7851a9;
+    text-align: center;
+    z-index: 9999;
+}
+
+.popup p {
+    margin: 0;
+}
+
+.show-popup {
+    display: block !important;
+}
+
 /*-----------------------small screen--------------*/
 
 @media only screen and (max-width: 1100px) {
@@ -505,26 +528,4 @@ nav .fas {
     .contact-left {
         margin-left: 5%;
     }
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #45a049;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: #7851a9;
-    text-align: center;
-    z-index: 9999;
-}
-
-.popup p {
-    margin: 0;
-}
-
-.show-popup {
-    display: block !important;
 }
