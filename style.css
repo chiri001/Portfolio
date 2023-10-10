@@ -82,7 +82,10 @@ nav ul li a:hover::after {
 
 .header-text img {
     width: 300px;
-    height: auto;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
 }
 .header-text p {
     color: #7851a9;
@@ -456,6 +459,7 @@ nav .fas {
     }
     .header-text img {
         width: 200px;
+        height: 200px;
     }
 
     .header-text h1 {
